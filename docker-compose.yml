@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  dante:
+    container_name: dante
+    build: 
+      context: .
+      args:
+        - user=my_user
+        - password=my_password
+    ports:
+      - "1080:1080"
+    restart: always
